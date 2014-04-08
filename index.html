@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>Coins game</title>
+    <script src='js/jquery.js'></script>
+    <script src='js/game.js'></script>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+            text-align: center;
+            background-color: #f2f2f2;
+            font-family: 'SilkscreenNormal';
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        @font-face {
+            font-family: 'SilkscreenNormal';
+            src: url('fonts/slkscr-webfont.eot');
+            src: url('fonts/slkscr-webfont.eot?#iefix') format('embedded-opentype'),
+            url('fonts/slkscr-webfont.woff') format('woff'),
+            url('fonts/slkscr-webfont.ttf') format('truetype'),
+            url('fonts/slkscr-webfont.svg#SilkscreenNormal') format('svg');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+        #player1 {
+            color: #F9D423;
+        }
+
+        #player2 {
+            color: #FC913A;
+        }
+
+        #game h1 {
+            font-size:20px;
+            padding:10px;
+        }
+
+        a {
+            font-size:44px;
+            text-decoration: none;
+            padding: 20px;
+            color: black;
+        }
+
+        table#board td {
+            width: 70px;
+            height: 70px;
+            border: 1px solid lightgray;
+        }
+
+        #game img {
+            border:0px;
+        }
+
+        #game {
+            display: none;
+            display: inline-block;
+        }
+        .gameBlock {
+            padding: 30px;
+        }
+        .control {
+            float:left;
+        }
+        #gameStatus {
+            padding: 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div id="start">
+    <a href="#" onclick="app.initSinglePlayer()">Single player</a>
+    <a href="#" onclick="app.initMultiPlayer()">Multi player</a>
+</div>
+<div id="game">
+    <div>
+        <a href="#" onclick="app.restart()">Restart</a> <a href="#" onclick="app.exit()">Exit</a>
+    </div>
+    <div id="gameStatus">
+        waiting...
+    </div>
+    <div class="gameBlock">
+        <div id="player1" class="control">
+            <h1>player1</h1>
+        </div>
+        <div class="control" id="bordBlock">
+
+        </div>
+        <div id="player2" class="control">
+            <h1>player2</h1>
+        </div>
+    </div>
+</div>
+</body>
+</html>
